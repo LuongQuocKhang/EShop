@@ -26,6 +26,6 @@ internal class CreateProductHandler : ICommandHandler<CreateProductCommand, Crea
             Price = command.Price
         };
 
-        return new CreateProductResult(new Guid());
+        return new CreateProductResult(Guid.NewGuid());
     }
 }
