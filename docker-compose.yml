@@ -1,8 +1,13 @@
 version: '3.4'
 
 services:
-  eshop.catalog.api:
-    image: ${DOCKER_REGISTRY-}eshopcatalogapi
-    build:
-      context: .
-      dockerfile: src/Services/Catalog/EShop.Catalog.API/Dockerfile
+  # eshop.catalog.api:
+  #   image: ${DOCKER_REGISTRY-}eshopcatalogapi
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Catalog/EShop.Catalog.API/Dockerfile
+  catalogdb:
+    image: postgres
+
+volumes:
+  postgres_catalog: 
