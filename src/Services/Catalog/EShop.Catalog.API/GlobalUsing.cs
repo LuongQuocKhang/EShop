@@ -4,3 +4,4 @@ global using MediatR;
 global  using Marten;
 global using BuildingBlocks.CQRS;
 global using EShop.Catalog.API.Models;
+global using FluentValidation;
