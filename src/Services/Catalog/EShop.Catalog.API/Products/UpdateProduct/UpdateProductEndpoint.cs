@@ -16,7 +16,6 @@ public class UpdateProductEndpoint : ICarterModule
             UpdateProductResponse response = result.Adapt<UpdateProductResponse>();
 
             return Results.Ok(response);
-
         }).WithName("Update Product")
         .Produces<UpdateProductResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)

@@ -15,7 +15,6 @@ public class GetProductByIdEndpoint : ICarterModule
             GetProductByIdResponse response = result.Adapt<GetProductByIdResponse>();
 
             return Results.Ok(response);
-
         }).WithName("Get Product By Id")
         .Produces<GetProductByIdResponse>(StatusCodes.Status302Found)
         .ProducesProblem(StatusCodes.Status404NotFound)
