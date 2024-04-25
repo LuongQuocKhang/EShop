@@ -1,9 +1,6 @@
-﻿
-using EShop.Catalog.API.Products.CreateProduct;
+﻿using EShop.Catalog.API.Products.DeleteProduct.Records;
 
 namespace EShop.Catalog.API.Products.DeleteProduct;
-
-public record DeleteProductResponse(bool IsSuccess);
 
 public class DeleteProductEndpoint : ICarterModule
 {

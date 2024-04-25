@@ -1,15 +1,20 @@
-﻿using EShop.Catalog.API.Products.CreateProduct.Records;
+﻿using EShop.Catalog.API.Products.UpdateProduct.Records;
 
-namespace EShop.Catalog.API.Products.CreateProduct;
+namespace EShop.Catalog.API.Products.UpdateProduct;
 
-public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
+public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
 {
-    public CreateProductCommandValidator()
+    public UpdateProductCommandValidator()
     {
-        RuleFor(x => x.Name)
+        RuleFor(x => x.Id)
             .Cascade(CascadeMode.Stop)
             .NotEmpty()
-            .WithMessage("Name is required");
+            .WithMessage("Id is required");
+
+        RuleFor(x => x.Name)
+            .Cascade(CascadeMode.Stop)
+            .NotEmpty().WithMessage("Name is required")
+            .Length(2, 150).WithMessage("Name must be between 2 and 150 characters");
 
         RuleFor(x => x.Category)
             .Cascade(CascadeMode.Stop)

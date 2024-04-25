@@ -1,8 +1,6 @@
-﻿using EShop.Catalog.API.Products.GetProductById;
+﻿using EShop.Catalog.API.Products.GetProductByCategory.Records;
 
 namespace EShop.Catalog.API.Products.GetProductByCategory;
-
-public record GetProductByCategoryResponse(IReadOnlyCollection<Product> Products);
 
 public class GetProductByCategoryEndpoint : ICarterModule
 {
@@ -19,7 +17,7 @@ public class GetProductByCategoryEndpoint : ICarterModule
             return Results.Ok(response);
 
         }).WithName("Get Product By Category")
-        .Produces<GetProductByIdResponse>(StatusCodes.Status302Found)
+        .Produces<GetProductByCategoryResponse>(StatusCodes.Status302Found)
         .ProducesProblem(StatusCodes.Status404NotFound)
         .WithSummary("Get Product By Category")
         .WithDescription("Get Product By Category");

@@ -1,11 +1,8 @@
 ﻿using EShop.Catalog.API.Common;
+using EShop.Catalog.API.Products.GetProducts.Records;
 using Marten.Pagination;
 
 namespace EShop.Catalog.API.Products.GetProducts;
-
-public record GetProductsQuery(int pageIndex = 0, int pageSize = 10, SortOrder SortOrder = SortOrder.ASC) : IQuery<GetProductsResult>;
-
-public record GetProductsResult(IEnumerable<Product> Products);
 
 internal class GetProductsQueryHandler(IDocumentSession session, ILogger<GetProductsQueryHandler> logger) 
     : IQueryHandler<GetProductsQuery, GetProductsResult>

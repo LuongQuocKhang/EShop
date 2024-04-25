@@ -1,4 +1,6 @@
-﻿namespace EShop.Catalog.API.Products.CreateProduct;
+﻿using EShop.Catalog.API.Products.CreateProduct.Records;
+
+namespace EShop.Catalog.API.Products.CreateProduct;
 
 internal class CreateProductCommandHandler(IDocumentSession session)
     : ICommandHandler<CreateProductCommand, CreateProductResult>

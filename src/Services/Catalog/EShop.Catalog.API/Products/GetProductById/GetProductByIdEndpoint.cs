@@ -1,8 +1,6 @@
-﻿namespace EShop.Catalog.API.Products.GetProductById;
+﻿using EShop.Catalog.API.Products.GetProductById.Records;
 
-public record GetProductByIdRequest(Guid Id);
-
-public record GetProductByIdResponse(Product Product);
+namespace EShop.Catalog.API.Products.GetProductById;
 
 public class GetProductByIdEndpoint : ICarterModule
 {

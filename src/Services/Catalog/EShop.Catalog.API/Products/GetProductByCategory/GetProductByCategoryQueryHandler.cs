@@ -1,7 +1,6 @@
-﻿namespace EShop.Catalog.API.Products.GetProductByCategory;
+﻿using EShop.Catalog.API.Products.GetProductByCategory.Records;
 
-public record GetProductByCategoryQuery(string Category) : IQuery<GetProductByCategoryResult>;
-public record GetProductByCategoryResult(IReadOnlyCollection<Product> Products);
+namespace EShop.Catalog.API.Products.GetProductByCategory;
 
 internal class GetProductByCategoryQueryHandler(IDocumentSession session, ILogger<GetProductByCategoryQueryHandler> logger)
     : IQueryHandler<GetProductByCategoryQuery, GetProductByCategoryResult>

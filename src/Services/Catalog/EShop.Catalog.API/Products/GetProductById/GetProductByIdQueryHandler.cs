@@ -1,10 +1,7 @@
 ﻿using EShop.Catalog.API.Exceptions;
+using EShop.Catalog.API.Products.GetProductById.Records;
 
 namespace EShop.Catalog.API.Products.GetProductById;
-
-public record GetProductByIdQuery(Guid Id) : IQuery<GetProductByIdResult>;
-
-public record GetProductByIdResult(Product Product);
 
 internal class GetProductByIdQueryHandler(IDocumentSession session, ILogger<GetProductByIdQueryHandler> logger)
     : IQueryHandler<GetProductByIdQuery, GetProductByIdResult>
