@@ -4,7 +4,7 @@ namespace EShop.Catalog.API.Products.GetProducts;
 
 public record GetProductsRequest(int pageIndex = 0, int pageSize = 10, SortOrder SortOrder = SortOrder.ASC);
 
-public record GetProductsResponse(IReadOnlyCollection<Product> Products);
+public record GetProductsResponse(IEnumerable<Product> Products);
 
 public class GetProductsEndpoint : ICarterModule
 {

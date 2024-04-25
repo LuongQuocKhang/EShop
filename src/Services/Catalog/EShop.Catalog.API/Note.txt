@@ -1,0 +1,2 @@
+﻿- If use database in Docker => update Server=host.docker.internal in file appsettings.json
+- In Docker.compose file update ConnectionStrings, replace Server="..." name of database in docker ( catalogdb )
