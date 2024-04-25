@@ -41,7 +41,6 @@ if (builder.Environment.IsDevelopment())
 
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
-
 builder.Services.AddHealthChecks()
     .AddNpgSql(connectionString);
 
